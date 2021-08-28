@@ -1,0 +1,28 @@
+import java.util.Scanner;
+
+class Main
+{
+    public static void main(String[] args)
+    {
+        Scanner in = new Scanner(System.in);
+        System.out.println("Enter the word to check the palindrome case :- ");
+        String s = in.next();
+        s = s.toLowerCase();
+        int l = s.length();
+        String rev ="";
+        
+        for (int i = l-1 ; i>=0 ; i--)
+        {
+            rev = rev + s.charAt(i);
+        }
+        
+        if(s.equals(rev))
+        {
+            System.out.println("The Given word is palindrome.");
+        }
+        else
+        {
+            System.out.println("The Given word is not an palindrome.");
+        }
+    }
+}
